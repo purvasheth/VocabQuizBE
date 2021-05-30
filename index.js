@@ -30,6 +30,6 @@ app.use("/bookmarked", verifyAuth, bookmarkedRouter);
 app.use(routeNotFound);
 app.use(errorHandler);
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Started server on ${port}!`);
 });
